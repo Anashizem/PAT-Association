@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Toys Form</title>
+    <link href="../css/styletoys.css" rel="stylesheet">
+    <link  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+    <body>
+        <div class="container">  
+            <form action="services" name="myForm" onsubmit="return validateForm()">
+                <h1> Form for donating Toys</h1>
+                <label for="name">Full name:<input  type="text" id="name" size=15 class="personal"></label>
+                <span id="fullnameError" class="error"></span>
+                <label for="adresse"> Email-Adresse:<input   type="email" id="email" size="15" class="personal"> </label>
+                <span id="emailError" class="error"></span>
+                <label for="phone"> Phone Number:<input   type="phone" id="phone" size="15" max="9" class="personal"> </label>
+                <span id="phoneError" class="error"></span>
+                <label for="home-adr">Home adresse:<input   type="text" id="home-adr" size="15" class="personal"></label>
+                <span id="addressError" class="error"></span>
+                <label>Type of Toy(s) being donated:<input   type="select" id="toys" name="select" size="15" class="personal"></label>
+                <span id="toysError" class="error"></span>
+                <label>Pick-up or Drop-off Preferences:</label>
+                <label id="pickup"><input   type="radio" name="drop" class="inline" name="recommend" unique> Pick-up</label>
+                <label id="dropup"><input   type="radio" name="drop" class="inline" name="recommend" unique> Drop-off</label>
+                <label>Quantity of Toy(s) being donated:<input   type="select" id="Quantity" name="select" size="15" class="personal" ></label>
+                <span id="QuantityError" class="error"></span>
+                <label>Description of Toys (if applicable):<input  type="text" id="Description" name="select" size="15" class="personal" ></label>
+                <span id="DescriptionError" class="error"></span>
+                <label>Do you have any specific instructions or preferences for the use of your donation?<input   type="text" id="preference" name="select" size="15" class="personal" ></label>
+                <span id="preferenceError" class="error"></span>
+                <label>Schedule a pick-up :<input   type="date" name="select" size="15" class="date" ></label>
+                <label>Are you making the donation as an individual or on behalf of an organization or an entity?</label>
+                <label id="individual"><input   type="radio" name="entity" class="inline" name="recommend"> Individual</label>
+                <label id="Association"><input   type="radio" name="entity" class="inline" name="recommend"> Association </label>
+                <label id="Company"><input   type="radio" name="entity" class="inline" name="recommend"> Company </label>
+                <label id="Club"><input   type="radio" name="entity" class="inline" name="recommend"> Club  </label>
+                <label>Please add an image of Toys you want to donate: <input type="file" class="fichier" alt="images of your Toys" multiple  ></label>
+                <button type="submit">Submit</button>        
+            </form>
+    </div>
+    <script src="../js/toys.js">
+    </script>
+    </body>
+</html>

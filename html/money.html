@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Money Form</title>
+    <link href="../css/stylemoney.css" rel="stylesheet">
+    <link  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+    <body>
+        <div class="container">  
+            <form action="services" name="myForm" onsubmit="return validateForm()">
+                <h1> Form for donating money</h1>
+                <label for="name">Full name:<input  type="text" id="name" size=15 class="personal"></label>
+                <span id="fullnameError" class="error"></span>
+                <label for="adresse"> Email-Adresse:<input  type="email" id="email" size="15" class="personal">  </label> 
+                <span id="emailError" class="error"></span>
+                <label for="phone"> Phone Number:<input  type="text" id="phone" size="15" max="9" class="personal">   </label> 
+                <span id="phoneError" class="error"></span> 
+                <label for="home-adr">Home adresse:<input  type="text" id="home-adr" size="15" class="personal">   </label>
+                <span id="addressError" class="error"></span>
+ 
+                <label for="money"> How much do you want to donate?<input type="text" id="money" name="select" class="money" placeholder="Amount in dinars"></label>
+                <span id="moneyError" class="error"></span>
+
+                <label>Methods of payments :</label>
+                <div class="payments">
+                    <div class="credit">
+                        <p>Credit Card</p>
+                        <img class="photo-credit" src="../assets/credit.png" alt="credit-card"> 
+                        <input  type="radio" name="drop" unique>
+                    </div>
+                    <div class="credit">
+                        <p>Paypal</p>
+                        <img class="photo-credit" src="../assets/paypal.png" alt="credit-card"> 
+                        <input  type="radio" name="drop" class="pay" unique>
+                    </div>
+                        <div class="credit">
+                            <p>bank transfer</p>
+                            <img class="photo-credit"  src="../assets/bank-transfer.png" alt="credit-card"> 
+                            <input  type="radio" name="drop" class="pay" unique>
+                        </div>
+                </div>
+                <label id="food">Where would you like your donation to be used:</label>
+                <label><input  type="radio" name="entity" class="inline" name="recommend"> Genral Fund </label>
+                <label><input  type="radio" name="entity" class="inline" name="recommend"> Specific project </label>
+                <label><input  type="radio" name="entity" class="inline" name="recommend"> others </label>
+
+
+                <label class="food">If you want to donate to a specific project, please mention which project:<input  type="text" id="projet" size="15" class="personal"></label>
+                <span id="projetError" class="error"></span>
+
+
+
+                <label>Are you making the donation as an individual or on behalf of an organization or an entity?</label>
+                <label><input  type="radio" name="entity" class="inline" name="recommend"> Individual </label>
+                <label><input  type="radio" name="entity" class="inline" name="recommend"> Association </label>
+                <label><input  type="radio" name="entity" class="inline" name="recommend" > Company  </label>
+                <label><input  type="radio" name="entity" class="inline" name="recommend"> Club </label>
+                <button type="submit">Submit</button>        
+            </form>
+        </div>
+        <script src="../js/money.js">
+        </script>
+    </body>
+</html>
